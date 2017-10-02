@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="Snow x race je první zimní závod fat biků v Čechách."/>
+        <meta name="keywords" content="Snow x race, Fat biking"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <title>Snow x race</title>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//api4.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+        <script type="text/javascript" src="/res/js/maps.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/res/css/maps.css"/>
+
+    </head>
+    <body>
+
+        <div id="map" style="height:300px"></div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                loadMap(
+                    {
+                        mapElement: $('#map'),
+                        center: '49.1424228N, 13.6224569E',
+                        zoom: 12,
+                        layers: [SMap.DEF_SMART_TURIST, SMap.DEF_SMART_WINTER, SMap.DEF_SMART_OPHOTO],
+                        touristCheckboxes: true
+                    },
+                    [
+                        {
+                            url: 'snowxrace2015.gpx',
+                            color: 'blue',
+                            title: 'Snow x race',
+                            checkbox: false,
+                            fit: true,
+                            markers: [
+                                ['49.138903403654695N, 13.663686197251081E', 13],
+                                ['49.1420450N, 13.6153100E', 14],
+                                ['49.1854308N, 13.5434247E', 13],
+                                ['49.218955021351576N, 13.5140660405159E', 1]
+                            ]
+                        }
+                    ]
+                );
+            });
+
+        </script>
+
+    </body>
+</html>

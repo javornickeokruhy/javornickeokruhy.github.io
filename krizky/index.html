@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="Křížky."/>
+        <meta name="keywords" content="Křížky"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <title>Křížky</title>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//api4.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+        <script type="text/javascript" src="/res/js/maps.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/res/css/maps.css"/>
+
+    </head>
+    <body>
+
+        <div id="map" style="height:300px"></div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                loadMap(
+                    {
+                        mapElement: $('#map'),
+                        center: '49.0551672N, 14.9032544E',
+                        zoom: 12,
+                        layers: [SMap.DEF_SMART_TURIST, SMap.DEF_SMART_BASE, SMap.DEF_SMART_OPHOTO],
+                        touristCheckboxes: true
+                    },
+                    [
+                        {
+                            url: 'krizky_maly.gpx',
+                            color: 'blue',
+                            title: 'Křížky krátká trasa',
+                            checkbox: false,
+                            fit: true,
+                            markers: [
+                                ['49.0496000N, 14.9002333E', 'church.png'],
+                                ['49.0457458N, 14.9002975E', 'donut.png'],
+                                ['49.0519000N, 14.8983000E', 'church.png'],
+                                ['49.0504694N, 14.9009472E', 'church.png'],
+                                ['49.0529472N, 14.9002306E', 'church.png'],
+                                ['49.0543972N, 14.9000556E', 'church.png'],
+                                ['49.0552000N, 14.9019167E', 'church.png'],
+                                ['49.0585833N, 14.9040833E', 'church.png'],
+                                ['49.0631528N, 14.8978750E', 'church.png'],
+                                ['49.0578444N, 14.9143417E', 'church.png'],
+                                ['49.0564028N, 14.9155639E', 'church.png'],
+                                ['49.0508894N, 14.9149369E', 'church.png'],
+                                ['49.0480972N, 14.9107528E', 'church.png'],
+                                ['49.0629461N, 14.9057275E', 'donut.png']
+                            ]
+                        },
+                        {
+                            url: 'krizky_velky.gpx',
+                            color: 'red',
+                            title: 'Křížky dlouhá trasa',
+                            checkbox: false,
+                            fit: true,
+                            markers: [
+                                ['49.0585833N, 14.9040833E', 'church.png'],
+                                ['49.0631528N, 14.8978750E', 'church.png'],
+                                ['49.0578444N, 14.9143417E', 'church.png'],
+                                ['49.0564028N, 14.9155639E', 'church.png'],
+                                ['49.0508894N, 14.9149369E', 'church.png'],
+                                ['49.0480972N, 14.9107528E', 'church.png'],
+                                ['49.0403078N, 14.9226644E', 'church.png'],
+                                ['49.0480886N, 14.9317978E', 'church.png'],
+                                ['49.0629461N, 14.9057275E', 'donut.png']
+                            ]
+                        }
+                    ]
+                );
+            });
+
+        </script>
+
+    </body>
+</html>

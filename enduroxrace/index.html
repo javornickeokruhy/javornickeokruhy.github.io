@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="EnduroXrace 2015."/>
+        <meta name="keywords" content="EnduroXrace, Sušice."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <title>EnduroXrace 2015</title>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//api4.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+        <script type="text/javascript" src="/res/js/maps.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/res/css/maps.css"/>
+
+    </head>
+    <body>
+
+        <div id="map" style="height:300px"></div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                loadMap(
+                    {
+                        mapElement: $('#map'),
+                        center: '49.2125128N, 13.5245025E',
+                        zoom: 13,
+                        layers: [SMap.DEF_SMART_TURIST, SMap.DEF_SMART_BASE, SMap.DEF_SMART_OPHOTO],
+                        touristCheckboxes: true
+                    },
+                    [
+                        {
+                            url: 'TR1.gpx',
+                            color: 'blue',
+                            title: 'TR1',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2322772N, 13.5249164E', 4],
+                                ['49.2374178N, 13.5411667E', 2],
+                                ['49.2349133N, 13.5587828E', 9]
+                            ]
+                        },
+                        {
+                            url: 'TR2.gpx',
+                            color: 'blue',
+                            title: 'TR2',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2235731N, 13.5457700E', 8],
+                                ['49.2131328N, 13.5517539E', 10],
+                                ['49.1991486N, 13.5613186E', 6],
+                                ['49.1923547N, 13.5634992E', 6]
+                            ]
+                        },
+                        {
+                            url: 'TR3.gpx',
+                            color: 'blue',
+                            title: 'TR3',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.1884339N, 13.5628786E', 14],
+                                ['49.1916317N, 13.5610497E', 0]
+                            ]
+                        },
+                        {
+                            url: 'TR4.gpx',
+                            color: 'blue',
+                            title: 'TR4',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.1866753N, 13.5596286E', 14],
+                                ['49.1986211N, 13.5513269E', 15],
+                                ['49.2087497N, 13.5444681E', 12]
+                            ]
+                        },
+                        {
+                            url: 'TR5.gpx',
+                            color: 'blue',
+                            title: 'TR5',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2194403N, 13.5146267E', 10],
+                                ['49.2170147N, 13.5003642E', 13],
+                                ['49.2229053N, 13.4916883E', 15],
+                                ['49.2289875N, 13.4896381E', 14],
+                                ['49.2327494N, 13.4892744E', 15]
+                            ]
+                        },
+                        {
+                            url: 'TR6.gpx',
+                            color: 'blue',
+                            title: 'TR6',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2350561N, 13.4997219E', 8],
+                                ['49.2289969N, 13.4941433E', 11]
+                            ]
+                        },
+                        {
+                            url: 'TR7.gpx',
+                            color: 'blue',
+                            title: 'TR7',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2342086N, 13.5134847E', 4],
+                                ['49.2325186N, 13.5170794E', 5]
+                            ]
+                        },
+                        {
+                            url: 'RZ1.gpx',
+                            color: '#FF0000',
+                            title: 'RZ1',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2325161N, 13.5451708E', 9],
+                                ['49.2302897N, 13.5437392E', 7],
+                                ['49.2281089N, 13.5448744E', 7]
+                            ]
+                        },
+                        {
+                            url: 'RZ2.gpx',
+                            color: '#FF0000',
+                            title: 'RZ2',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.1906686N, 13.5683781E', 14],
+                                ['49.1907600N, 13.5664147E', 6],
+                                ['49.1878253N, 13.5667458E', 9]
+                            ]
+                        },
+                        {
+                            url: 'RZ3.gpx',
+                            color: '#FF0000',
+                            title: 'RZ3',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.1893625N, 13.5721019E', 6],
+                                ['49.1867717N, 13.5731922E', 10],
+                                ['49.1851875N, 13.5694844E', 13]
+                            ]
+                        },
+                        {
+                            url: 'RZ4.gpx',
+                            color: '#FF0000',
+                            title: 'RZ4',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2180036N, 13.5314547E', 12],
+                                ['49.2208733N, 13.5228556E', 15],
+                                ['49.2239564N, 13.5193581E', 15]
+                            ]
+                        },
+                        {
+                            url: 'RZ5.gpx',
+                            color: '#FF0000',
+                            title: 'RZ5',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2364519N, 13.4943653E', 2],
+                                ['49.2367042N, 13.4985603E', 5],
+                            ]
+                        },
+                        {
+                            url: 'RZ6.gpx',
+                            color: '#FF0000',
+                            title: 'RZ6',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                                ['49.2351278N, 13.4920050E', 1],
+                                ['49.2375167N, 13.4993167E', 5],
+                                ['49.2347775N, 13.5064511E', 4]
+                            
+                            ]
+                        }
+                    ]
+                );
+            });
+
+        </script>
+
+    </body>
+</html>

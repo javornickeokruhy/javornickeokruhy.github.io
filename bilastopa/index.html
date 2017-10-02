@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="Bílá stopa v oblasti Javorníku na Šumavě a okolí"/>
+        <meta name="keywords" content="Bílá stopa, Javorník, Šumava"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <title>Bílá stopa v oblasti Javorníku na Šumavě a okolí</title>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="//api4.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+        <script type="text/javascript" src="/res/js/maps.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/res/css/maps.css"/>
+
+    </head>
+    <body>
+
+        <div id="map" style="height:300px"></div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                loadMap(
+                    {
+                        mapElement: $('#map'),
+                        center: '49.1424228N, 13.6224569E',
+                        zoom: 12,
+                        layers: [SMap.DEF_SMART_WINTER, SMap.DEF_SMART_TURIST, SMap.DEF_SMART_OPHOTO]
+                    },
+                    [
+                        {
+                            url: 'kasperskaarena1.gpx',
+                            color: 'cyan',
+                            title: 'Kašperská aréna',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'kasperskaarena2.gpx',
+                            color: 'cyan',
+                            title: 'Kašperská aréna',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'kasperskaarena3.gpx',
+                            color: 'cyan',
+                            title: 'Kašperská aréna',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'kasperskaarena4.gpx',
+                            color: 'cyan',
+                            title: 'Kašperská aréna',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'zelenyokruh.gpx',
+                            color: 'green',
+                            title: 'Zelený okruh',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'zlutyokruh.gpx',
+                            color: 'yellow',
+                            title: 'Žlutý okruh',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'cervenyokruh.gpx',
+                            color: 'red',
+                            title: 'Červený okruh',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'fialovyokruh.gpx',
+                            color: 'purple',
+                            title: 'Fialový okruh',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        },
+                        {
+                            url: 'modryokruh.gpx',
+                            color: 'blue',
+                            title: 'Modrý okruh',
+                            checkbox: true,
+                            fit: false,
+                            markers: null
+                        }
+                    ]
+                );
+            });
+
+        </script>
+
+    </body>
+</html>

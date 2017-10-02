@@ -1,0 +1,199 @@
+body {
+    background: url(../images/bg/light_toast.png);
+}
+
+abbr, acronym, dfn {
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+
+.flickr {background: url(../images/icons/social/flickr.png) no-repeat;}
+
+#logo {
+    margin-top: 0;
+}
+
+#navigation ul li a.blue:hover, 
+#navigation ul li:hover > a.blue {
+    background: #2db2ea;
+}
+
+#navigation ul li a.red:hover, 
+#navigation ul li:hover > a.red {
+    background: #c62020;
+}
+
+@media only screen and (min-width: 960px) {
+	.flexslider.home {
+		min-height: 340px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.slide-caption {
+		display: block;
+	}
+}
+
+.slide-caption {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    font-size: xx-large;
+    color: white;
+    background-color: transparent;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    line-height: 1em;
+}
+
+#page-title h2 {
+    padding-bottom: 20px;
+}
+
+#filters {
+    bottom: 22px;
+}
+
+#filters a, 
+.selected {
+    padding: 10px 15px;
+    margin: 0 10px 15px 0;
+    background-color: #404040 !important;
+    border-color: #404040 !important;
+    color: white !important;
+}
+
+#filters a.blue, 
+.blue.selected {
+    background-color: #2db2ea !important;
+    border-color: #2db2ea !important;
+    color: white !important;
+}
+
+#filters a.red, 
+.red.selected {
+    background-color: #c62020 !important;
+    border-color: #c62020 !important;
+}
+
+.blue-trail img {
+    border: 1px solid #2db2ea;
+    -moz-box-shadow: 0px 0px 3px #2db2ea;
+    -webkit-box-shadow: 0px 0px 3px #2db2ea;
+    box-shadow: 0px 0px 3px #2db2ea;
+}
+
+.red-trail img {
+    border: 1px solid #c62020;
+    -moz-box-shadow: 0px 0px 3px #c62020;
+    -webkit-box-shadow: 0px 0px 3px #c62020;
+    box-shadow: 0px 0px 3px #c62020;
+}
+
+.blue-trail .item-description h5 {
+	border-bottom: 3px solid #2db2ea;
+}
+
+.red-trail .item-description h5 {
+    border-bottom: 3px solid #c62020;
+}
+
+#footer_logo {
+	background-color: white;
+	padding: 18px 0;
+}
+
+#footer_logo a {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 8px;
+	margin-top: 20px;
+}
+
+.flexslider.home.small > div {
+    max-height: 200px;
+}
+
+#mapImage {
+    position: relative;
+}
+
+#mapImage:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#mapImage a {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#mapImage a:first-of-type {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 65px;
+}
+
+/*#mapImage a:last-of-type {
+    left: 110px;
+}*/
+
+#trailInfoTable td {
+	font-size: large;
+	font-weight: bold;
+	padding: 5px 10px 0 0;
+}
+
+.trailDescription {
+	font-size: larger;
+}
+
+.blue-links a, .red-links a {
+    text-decoration: underline;
+    margin-right: 7px;
+}
+
+.blue-links a {
+	color: #2db2ea;
+}
+
+.red-links a {
+    color: #c62020;
+}
+
+a.nostyle, a.nostyle:visited, a.nostyle:hover, a.nostyle:focus {
+	color: #666;
+}
+
+.flickr-widget {
+    width: 222px;
+    margin: 0 auto;
+}
+
+.flickr-widget a {
+    width: 92px;
+    height: 92px;
+}
+
+/* simple honeypot captcha */
+#contact-form .field:nth-of-type(3) {
+    display: none;
+}
+
+@media print {
+    
+    body, a {
+        color: black;
+    }
+    
+    #header, #navigation, #footer {
+        display: none;
+    }
+    
+}

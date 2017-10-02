@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta name="description" content="Javornický Pazdřivec 2016"/>
+        <meta name="keywords" content="Javornický Pazdřivec, Pazdřivec, Javorník"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+        <title>Javornický Pazdřivec 2016</title>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="//api4.mapy.cz/loader.js"></script>
+        <script type="text/javascript">Loader.load();</script>
+        <script type="text/javascript" src="/res/js/maps.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="/res/css/maps.css"/>
+
+    </head>
+    <body>
+
+        <div id="map" style="height:300px"></div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                loadMap(
+                    {
+                        mapElement: $('#map'),
+                        center: '49.1694983N, 13.5759825E',
+                        zoom: 13,
+                        layers: [SMap.DEF_SMART_TURIST, SMap.DEF_SMART_BASE, SMap.DEF_SMART_OPHOTO],
+                        touristCheckboxes: false
+                    },
+                    [
+                        {
+                            url: 'JavornickyPazdrivec2016Short.gpx',
+                            color: 'blue',
+                            title: 'Javornický Pazdřivec 2016 krátká',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                            ]
+                        },
+                        {
+                            url: 'JavornickyPazdrivec2016Long.gpx',
+                            color: 'red',
+                            title: 'Javornický Pazdřivec 2016 dlouhá',
+                            checkbox: false,
+                            fit: false,
+                            markers: [
+                            ]
+                        }
+                    ]
+                );
+            });
+
+        </script>
+
+    </body>
+</html>
